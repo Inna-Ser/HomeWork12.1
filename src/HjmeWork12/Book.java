@@ -16,7 +16,7 @@ public class Book {
     public String getName() {
         return this.name;
     }
-    public String getAuthor() {
+    public Author getAuthor() {
         return this.author;
     }
     public int getYearPublication() {
@@ -24,7 +24,6 @@ public class Book {
     }
     public void setYearPublication(int yearPublication) {
         int correctYear = LocalDate.now().getYear();
-        if(yearPublication)
         this.yearPublication = yearPublication;
     }
 }
