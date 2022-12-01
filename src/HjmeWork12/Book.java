@@ -37,16 +37,11 @@ public class Book {
     }
 
     @Override
-    public boolean equals(Object obj) {
-        if (obj == this)
-            return true;   // true выходит в консоль, не знаю как исправить
-        if (obj == null || getClass() != obj.getClass()) {
-            System.out.println("Это разные книги");
-        } else {
-            System.out.println("Это одинаковые книги");
-        }
-        Book book = (Book) obj;
-        return book.equals(book);
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Book book = (Book) o;
+        return yearPublication == book.yearPublication && name.equals(book.name) && author.equals(book.author);
     }
 
     @Override

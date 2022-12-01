@@ -26,6 +26,6 @@ public class Main {
          System.out.println(book4);
          System.out.println(book5);
      // результат сравнивания книг
-         System.out.println(book3.equals(book2));
+         System.out.println("Эти книги одинаковые? " + book5.equals(book2));
      }
 }
